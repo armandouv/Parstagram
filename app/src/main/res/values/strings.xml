@@ -4,4 +4,7 @@
     <string name="username">username</string>
     <string name="password">password</string>
     <string name="login">Login</string>
+    <string name="upload_image">Upload image</string>
+    <string name="submit">Submit</string>
+    <string name="description">Description</string>
 </resources>
