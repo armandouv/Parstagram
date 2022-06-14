@@ -14,7 +14,6 @@ import com.parse.ParseUser;
 public class LoginActivity extends AppCompatActivity {
 
     private ActivityLoginBinding binding;
-    public final static String TAG = LoginActivity.class.getSimpleName();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +35,11 @@ public class LoginActivity extends AppCompatActivity {
 
             username.clear();
             password.clear();
+        });
+
+        binding.goSignupButton.setOnClickListener(v -> {
+            Intent intent = new Intent(this, SignupActivity.class);
+            startActivity(intent);
         });
     }
 
