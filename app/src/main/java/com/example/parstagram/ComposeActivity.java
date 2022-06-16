@@ -13,23 +13,23 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 
-import com.example.parstagram.databinding.ActivityTimelineBinding;
+import com.example.parstagram.databinding.ActivityComposeBinding;
 import com.parse.ParseFile;
 import com.parse.ParseUser;
 
 import java.io.File;
 
-public class TimelineActivity extends AppCompatActivity {
-    private ActivityTimelineBinding binding;
+public class ComposeActivity extends AppCompatActivity {
+    public final String APP_TAG = ComposeActivity.class.getSimpleName();
     public final static int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 1034;
-    public final String APP_TAG = TimelineActivity.class.getSimpleName();
+    private ActivityComposeBinding binding;
     private File mPhotoFile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityTimelineBinding.inflate(getLayoutInflater());
+        binding = ActivityComposeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         binding.logoutButton.setOnClickListener(v ->
@@ -77,10 +77,7 @@ public class TimelineActivity extends AppCompatActivity {
             });
         });
 
-        binding.uploadImage.setOnClickListener(v -> {
-            launchCamera();
-            Toast.makeText(this, "jala", Toast.LENGTH_SHORT).show();
-        });
+        binding.uploadImage.setOnClickListener(v -> launchCamera());
     }
 
     private void launchCamera() {

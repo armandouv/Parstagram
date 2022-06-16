@@ -31,7 +31,7 @@
             android:name=".SignupActivity"
             android:exported="false" />
         <activity
-            android:name=".TimelineActivity"
+            android:name=".ComposeActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"

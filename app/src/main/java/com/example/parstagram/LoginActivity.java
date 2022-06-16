@@ -57,7 +57,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void goTimelineActivity() {
-        Intent intent = new Intent(this, TimelineActivity.class);
+        Intent intent = new Intent(this, ComposeActivity.class);
         startActivity(intent);
     }
 }
