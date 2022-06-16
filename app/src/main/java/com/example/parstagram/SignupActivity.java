@@ -22,7 +22,7 @@ public class SignupActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         if (ParseUser.getCurrentUser() != null) {
-            Intent intent = new Intent(this, ComposeActivity.class);
+            Intent intent = new Intent(this, TimelineActivity.class);
             startActivity(intent);
             finish();
             return;
@@ -50,7 +50,7 @@ public class SignupActivity extends AppCompatActivity {
             }
 
             Toast.makeText(this, "Success!", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, ComposeActivity.class);
+            Intent intent = new Intent(this, TimelineActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
             finish();
