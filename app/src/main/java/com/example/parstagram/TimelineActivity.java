@@ -52,12 +52,19 @@ public class TimelineActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
+        mBinding.swipeContainer.setOnRefreshListener(() -> populateHomeTimeline(true));
+
+        mBinding.swipeContainer.setColorSchemeResources(android.R.color.holo_blue_bright,
+                android.R.color.holo_green_light,
+                android.R.color.holo_orange_light,
+                android.R.color.holo_red_light);
+
         mBinding.postsView.setLayoutManager(new LinearLayoutManager(this));
         mBinding.postsView.setAdapter(mPostsAdapter);
-        populateHomeTimeline();
+        populateHomeTimeline(false);
     }
 
-    private void populateHomeTimeline() {
+    private void populateHomeTimeline(boolean isRefreshing) {
         ParseQuery<Post> query = ParseQuery.getQuery(Post.class);
         query.include(Post.KEY_USER);
         query.setLimit(20);
@@ -69,6 +76,10 @@ public class TimelineActivity extends AppCompatActivity {
                 return;
             }
 
+            if (isRefreshing) {
+                mPosts.clear();
+                mBinding.swipeContainer.setRefreshing(false);
+            }
             mPosts.addAll(posts);
             mPostsAdapter.notifyDataSetChanged();
         });
