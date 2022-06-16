@@ -40,6 +40,11 @@ public class TimelineActivity extends AppCompatActivity {
                     finish();
                 }));
 
+        mBinding.composeButton.setOnClickListener(v -> {
+            Intent intent = new Intent(this, ComposeActivity.class);
+            startActivity(intent);
+        });
+
         mPostsAdapter = new PostsAdapter(this, mPosts, (view, position) -> {
             Intent intent = new Intent(TimelineActivity.this, PostDetailsActivity.class);
             Post post = mPosts.get(position);
@@ -71,6 +76,7 @@ public class TimelineActivity extends AppCompatActivity {
 
     private void goLoginActivity() {
         Intent intent = new Intent(this, LoginActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
 }

@@ -32,18 +32,6 @@ public class ComposeActivity extends AppCompatActivity {
         binding = ActivityComposeBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        binding.logoutButton.setOnClickListener(v ->
-                ParseUser.logOutInBackground(e -> {
-                    if (e != null) {
-                        Toast.makeText(this, "Couldn't log out", Toast.LENGTH_SHORT).show();
-                        return;
-                    }
-
-                    Toast.makeText(this, "Logged out", Toast.LENGTH_SHORT).show();
-                    goLoginActivity();
-                    finish();
-                }));
-
         binding.submitImage.setOnClickListener(v -> {
             String description = binding.description
                     .getText()
@@ -74,6 +62,9 @@ public class ComposeActivity extends AppCompatActivity {
                 binding.description.setText("");
                 binding.image.setImageResource(0);
                 Toast.makeText(this, "Post created successfully", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(this, TimelineActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
             });
         });
 
@@ -130,10 +121,5 @@ public class ComposeActivity extends AppCompatActivity {
                 Toast.makeText(this, "Picture wasn't taken!", Toast.LENGTH_SHORT).show();
             }
         }
-    }
-
-    private void goLoginActivity() {
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
     }
 }
