@@ -21,13 +21,13 @@ The following **required** functionality is completed:
 The following **stretch** features are implemented:
 
 - [X] Show the username and creation time for each post
+- [X] User should switch between different tabs using fragments and a Bottom Navigation View.
+  - [X] Feed Tab (to view all posts from all users)
+  - [X] Capture Tab (to make a new post using the Camera and Photo Gallery)
+  - [X] Profile Tab (to view only the current user's posts, in a grid)
 - [ ] Style the login page to look like the real Instagram login page.
 - [ ] Style the feed to look like the real Instagram feed.
 - [ ] User can load more posts once they reach the bottom of the feed using endless scrolling.
-- [ ] User should switch between different tabs using fragments and a Bottom Navigation View.
-    - [ ] Feed Tab (to view all posts from all users)
-    - [ ] Capture Tab (to make a new post using the Camera and Photo Gallery)
-    - [ ] Profile Tab (to view only the current user's posts, in a grid)
 - User Profiles:
     - [ ] Allow the logged in user to add a profile photo
     - [ ] Display the profile photo with each post
