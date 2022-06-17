@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:autofillHints="Description"
+        android:ems="10"
+        android:hint="@string/description"
+        android:inputType="text"
+        tools:ignore="LabelFor" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:contentDescription="@string/upload_image" />
+
+    <Button
+        android:id="@+id/upload_image"
+        android:layout_width="381dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/upload_image" />
+
+    <Button
+        android:id="@+id/submit_image"
+        android:layout_width="383dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/submit" />
+
+
+</LinearLayout>
