@@ -26,7 +26,9 @@ import com.parse.ParseUser;
 
 import java.io.File;
 
-
+/**
+ * Post creation screen.
+ */
 public class ComposeFragment extends Fragment {
 
     public final static int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 1034;

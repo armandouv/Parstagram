@@ -8,6 +8,9 @@ import com.bumptech.glide.Glide;
 import com.example.parstagram.R;
 import com.example.parstagram.databinding.ActivityPostDetailsBinding;
 
+/**
+ * Displays a detailed view of a Post.
+ */
 public class PostDetailsActivity extends AppCompatActivity {
     private ActivityPostDetailsBinding mBinding;
 

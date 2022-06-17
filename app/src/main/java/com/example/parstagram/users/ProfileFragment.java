@@ -7,6 +7,9 @@ import com.example.parstagram.posts.TimelineFragment;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
+/**
+ * Displays the 20 most recent posts of the logged in User.
+ */
 public class ProfileFragment extends TimelineFragment {
     @Override
     protected void populateHomeTimeline(boolean isRefreshing) {

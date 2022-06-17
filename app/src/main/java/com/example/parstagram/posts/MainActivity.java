@@ -9,6 +9,10 @@ import com.example.parstagram.R;
 import com.example.parstagram.databinding.ActivityTimelineBinding;
 import com.example.parstagram.users.ProfileFragment;
 
+
+/**
+ * Displays different Fragments depending on the option selected by the user in the navigation menu.
+ */
 public class MainActivity extends AppCompatActivity {
     private ActivityTimelineBinding mBinding;
 

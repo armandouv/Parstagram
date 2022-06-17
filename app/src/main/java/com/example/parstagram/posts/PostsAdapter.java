@@ -13,6 +13,10 @@ import com.example.parstagram.databinding.ItemPostBinding;
 
 import java.util.List;
 
+
+/**
+ * Handles displayed posts on the timeline's RecyclerView.
+ */
 public class PostsAdapter extends RecyclerView.Adapter<PostsAdapter.ViewHolder> {
     private final Context mContext;
     private final List<Post> mPosts;

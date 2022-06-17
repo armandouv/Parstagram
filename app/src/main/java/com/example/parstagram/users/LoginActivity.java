@@ -11,7 +11,9 @@ import com.example.parstagram.databinding.ActivityLoginBinding;
 import com.example.parstagram.posts.MainActivity;
 import com.parse.ParseUser;
 
-
+/**
+ * Allows a User to log in.
+ */
 public class LoginActivity extends AppCompatActivity {
 
     private ActivityLoginBinding mBinding;

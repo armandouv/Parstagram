@@ -21,6 +21,9 @@ import com.parse.ParseUser;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Displays the 20 most recent Posts.
+ */
 public class TimelineFragment extends Fragment {
 
     public static final String TAG = MainActivity.class.getSimpleName();

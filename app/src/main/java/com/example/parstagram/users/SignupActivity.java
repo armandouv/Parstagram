@@ -12,6 +12,9 @@ import com.example.parstagram.databinding.ActivitySignupBinding;
 import com.example.parstagram.posts.MainActivity;
 import com.parse.ParseUser;
 
+/**
+ * Allows a User to sign up.
+ */
 public class SignupActivity extends AppCompatActivity {
     private ActivitySignupBinding mBinding;
 
