@@ -11,15 +11,15 @@ import com.example.parstagram.databinding.ActivitySignupBinding;
 import com.parse.ParseUser;
 
 public class SignupActivity extends AppCompatActivity {
-    private ActivitySignupBinding binding;
+    private ActivitySignupBinding mBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        binding = ActivitySignupBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        mBinding = ActivitySignupBinding.inflate(getLayoutInflater());
+        setContentView(mBinding.getRoot());
 
         if (ParseUser.getCurrentUser() != null) {
             Intent intent = new Intent(this, TimelineActivity.class);
@@ -28,9 +28,9 @@ public class SignupActivity extends AppCompatActivity {
             return;
         }
 
-        binding.signupButton.setOnClickListener((view) -> {
-            Editable username = binding.usernameSignup.getText();
-            Editable password = binding.passwordSignup.getText();
+        mBinding.signupButton.setOnClickListener((view) -> {
+            Editable username = mBinding.usernameSignup.getText();
+            Editable password = mBinding.passwordSignup.getText();
             signupUser(username.toString(), password.toString());
 
             username.clear();

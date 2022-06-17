@@ -22,18 +22,18 @@ import java.io.File;
 public class ComposeActivity extends AppCompatActivity {
     public final String APP_TAG = ComposeActivity.class.getSimpleName();
     public final static int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 1034;
-    private ActivityComposeBinding binding;
+    private ActivityComposeBinding mBinding;
     private File mPhotoFile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityComposeBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        mBinding = ActivityComposeBinding.inflate(getLayoutInflater());
+        setContentView(mBinding.getRoot());
 
-        binding.submitImage.setOnClickListener(v -> {
-            String description = binding.description
+        mBinding.submitImage.setOnClickListener(v -> {
+            String description = mBinding.description
                     .getText()
                     .toString();
             if (description.isEmpty()) {
@@ -41,7 +41,7 @@ public class ComposeActivity extends AppCompatActivity {
                 return;
             }
 
-            if (mPhotoFile == null || binding.image.getDrawable() == null) {
+            if (mPhotoFile == null || mBinding.image.getDrawable() == null) {
                 Toast.makeText(this, "You must upload an image", Toast.LENGTH_SHORT).show();
                 return;
             }
@@ -59,8 +59,8 @@ public class ComposeActivity extends AppCompatActivity {
                     return;
                 }
 
-                binding.description.setText("");
-                binding.image.setImageResource(0);
+                mBinding.description.setText("");
+                mBinding.image.setImageResource(0);
                 Toast.makeText(this, "Post created successfully", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(this, TimelineActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -68,7 +68,7 @@ public class ComposeActivity extends AppCompatActivity {
             });
         });
 
-        binding.uploadImage.setOnClickListener(v -> launchCamera());
+        mBinding.uploadImage.setOnClickListener(v -> launchCamera());
     }
 
     private void launchCamera() {
@@ -116,7 +116,7 @@ public class ComposeActivity extends AppCompatActivity {
                 Bitmap takenImage = BitmapFactory.decodeFile(mPhotoFile.getAbsolutePath());
                 // RESIZE BITMAP, see section below
                 // Load the taken image into a preview
-                binding.image.setImageBitmap(takenImage);
+                mBinding.image.setImageBitmap(takenImage);
             } else { // Result was a failure
                 Toast.makeText(this, "Picture wasn't taken!", Toast.LENGTH_SHORT).show();
             }

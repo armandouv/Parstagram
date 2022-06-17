@@ -13,14 +13,14 @@ import com.parse.ParseUser;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private ActivityLoginBinding binding;
+    private ActivityLoginBinding mBinding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityLoginBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        mBinding = ActivityLoginBinding.inflate(getLayoutInflater());
+        setContentView(mBinding.getRoot());
 
         if (ParseUser.getCurrentUser() != null) {
             goTimelineActivity();
@@ -28,16 +28,16 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-        binding.loginButton.setOnClickListener((view) -> {
-            Editable username = binding.username.getText();
-            Editable password = binding.password.getText();
+        mBinding.loginButton.setOnClickListener((view) -> {
+            Editable username = mBinding.username.getText();
+            Editable password = mBinding.password.getText();
             loginUser(username.toString(), password.toString());
 
             username.clear();
             password.clear();
         });
 
-        binding.goSignupButton.setOnClickListener(v -> {
+        mBinding.goSignupButton.setOnClickListener(v -> {
             Intent intent = new Intent(this, SignupActivity.class);
             startActivity(intent);
         });
