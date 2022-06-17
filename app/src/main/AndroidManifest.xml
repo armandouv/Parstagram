@@ -27,7 +27,7 @@
             android:name=".posts.PostDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".posts.TimelineActivity"
+            android:name=".posts.MainActivity"
             android:exported="false" />
 
         <provider

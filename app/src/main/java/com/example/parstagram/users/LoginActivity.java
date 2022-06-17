@@ -8,7 +8,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.parstagram.databinding.ActivityLoginBinding;
-import com.example.parstagram.posts.TimelineActivity;
+import com.example.parstagram.posts.MainActivity;
 import com.parse.ParseUser;
 
 
@@ -58,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void goTimelineActivity() {
-        Intent intent = new Intent(this, TimelineActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 }

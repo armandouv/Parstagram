@@ -9,7 +9,7 @@ import com.example.parstagram.R;
 import com.example.parstagram.databinding.ActivityTimelineBinding;
 import com.example.parstagram.users.ProfileFragment;
 
-public class TimelineActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
     private ActivityTimelineBinding mBinding;
 
     @Override

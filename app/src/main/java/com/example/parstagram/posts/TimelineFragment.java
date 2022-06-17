@@ -23,7 +23,7 @@ import java.util.List;
 
 public class TimelineFragment extends Fragment {
 
-    public static final String TAG = TimelineActivity.class.getSimpleName();
+    public static final String TAG = MainActivity.class.getSimpleName();
     protected final List<Post> mPosts = new ArrayList<>();
     protected FragmentTimelineBinding mBinding;
     protected PostsAdapter mPostsAdapter;

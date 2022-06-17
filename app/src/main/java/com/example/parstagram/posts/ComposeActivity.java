@@ -62,7 +62,7 @@ public class ComposeActivity extends AppCompatActivity {
                 mBinding.description.setText("");
                 mBinding.image.setImageResource(0);
                 Toast.makeText(this, "Post created successfully", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(this, TimelineActivity.class);
+                Intent intent = new Intent(this, MainActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
             });

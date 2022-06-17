@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.parstagram.R;
 import com.example.parstagram.databinding.ActivitySignupBinding;
-import com.example.parstagram.posts.TimelineActivity;
+import com.example.parstagram.posts.MainActivity;
 import com.parse.ParseUser;
 
 public class SignupActivity extends AppCompatActivity {
@@ -24,7 +24,7 @@ public class SignupActivity extends AppCompatActivity {
         setContentView(mBinding.getRoot());
 
         if (ParseUser.getCurrentUser() != null) {
-            Intent intent = new Intent(this, TimelineActivity.class);
+            Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
             finish();
             return;
@@ -52,7 +52,7 @@ public class SignupActivity extends AppCompatActivity {
             }
 
             Toast.makeText(this, "Success!", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(this, TimelineActivity.class);
+            Intent intent = new Intent(this, MainActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
             finish();
