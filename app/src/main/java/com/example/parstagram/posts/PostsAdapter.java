@@ -1,4 +1,4 @@
-package com.example.parstagram;
+package com.example.parstagram.posts;
 
 import android.content.Context;
 import android.view.LayoutInflater;

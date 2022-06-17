@@ -1,10 +1,11 @@
-package com.example.parstagram;
+package com.example.parstagram.posts;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
+import com.example.parstagram.R;
 import com.example.parstagram.databinding.ActivityPostDetailsBinding;
 
 public class PostDetailsActivity extends AppCompatActivity {

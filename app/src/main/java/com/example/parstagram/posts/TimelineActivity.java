@@ -1,4 +1,4 @@
-package com.example.parstagram;
+package com.example.parstagram.posts;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.parstagram.databinding.ActivityTimelineBinding;
+import com.example.parstagram.users.LoginActivity;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 

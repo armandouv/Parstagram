@@ -1,4 +1,4 @@
-package com.example.parstagram;
+package com.example.parstagram.users;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,7 +7,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.parstagram.R;
 import com.example.parstagram.databinding.ActivitySignupBinding;
+import com.example.parstagram.posts.TimelineActivity;
 import com.parse.ParseUser;
 
 public class SignupActivity extends AppCompatActivity {
