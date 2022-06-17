@@ -44,9 +44,6 @@
             android:name=".users.SignupActivity"
             android:exported="false" />
         <activity
-            android:name=".posts.ComposeActivity"
-            android:exported="false" />
-        <activity
             android:name=".users.LoginActivity"
             android:exported="true">
             <intent-filter>
